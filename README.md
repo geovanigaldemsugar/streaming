@@ -1,12 +1,13 @@
 # Streaming 📺
 #### Create your own media/streaming service at home using Sandarr, Radarr, Qbittorrent and Jellyfin. 
 
-## Requirements
-1. Decent Computer/Server
+## Recommended
+1. Decent Computer/Server (personally running on a old dell i3 2nd genn with 4gb Ram)
+2. 1TB SSD or Fast HDD
 
 ## Quickstart
 ### installation
-you need to have an idea where you want your media server/streaming to run. you can run it on your personal computer (which i dont reccomended unless you have a extra HDD attached). Currently i use my PC, with a seperate drive with ubuntu server installed. You don't have to install a serperate os or anything as the applications themselves are dockerized for us. So that means you can also run them on windows(not that they dont have a windows versions though), running these applications with docker make setup much easier and less risky in case you break something (configs etc...).  
+You need to have an idea where you want your media server/streaming to run. you can run it on your personal computer (which i don't recommended unless you have a extra HDD attached). Currently i use my PC, with a seperate drive with ubuntu server installed. You don't have to install a serperate os or anything as the applications themselves are dockerized for us. So that means you can also run them on windows(not that they don't have a windows versions though), running these applications with docker make setup much easier and less risky in case you break something (configs etc...).  
 
 #### Docker 
 Installing [Docker Engine](https://docs.docker.com/engine/install/) is a must. Docker allows us to run bare bone VMs that containerizes an application on our system, docker just works everywhere which is its usefull.
@@ -134,9 +135,66 @@ qbittorrent will be our download client to download videos using the torrent lin
 
 go to `<host_computer_ipaddress>:8080` 
 1. login using the login details you saved earlier
-2. click settings, then webui, change you password and username, optionally you can disable auth for local addresses
+2. click settinggs ->  webui, change you password and username, optionally you can disable auth for local addresses
 
-####Sonarr
+#### Sonarr
+Sonarr monitors and download our tv shows for us, using indexes and download client.
+
+go to `<host_computer_ipaddress>:8989`
+1. add your login details
+2. go to settings -> media management, click add root folder, scroll down until you see `/tv/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/tv` to give acess to all. modify the permisson however you want.
+3. go to settings -> Indexers, click add, under torrents click `Torznab`.
+4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
+5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket .api key you saved earlier. click on category to refresh then click TV and or/ select the specifc catergories you want.
+6. click test if successfull then click save.
+7. Add all the indexers in Jackett repeating steps 1-6.
+
+1. go to settings -> Download Clients, click add -> qbittorrent.
+2. fill in the client properties,, placing the host `ip address`, `port`, `username`  and `password`/
+3. click test if successful then click save.
+4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads`
+5. click save
+
+#### Testing Sonarr
+Your finished just search for a show `Symbionic Titan` to add and test it out. it takes time for the shows to be downloaded.
+![Screenshot from 2024-06-02 17-12-52](https://github.com/geovanigaldemsugar/streaming/assets/67174852/64257fac-01b3-42ee-b6ee-9c1b1c257210)
+
+#### Radarr
+Sonarr monitors and download our movie shows for us, using indexes and download client.
+
+go to `<host_computer_ipaddress>:7878`
+1. add your login details
+2. go to settings -> media management, click add root folder, scroll down until you see `/movies/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/movies` to give acess to all. modify the permisson however you want.
+3. go to settings -> Indexers, click add, under torrents click `Torznab`.
+4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
+5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket .api key you saved earlier. click on category to refresh then click TV and or/ select the specifc catergories you want.
+6. click test if successfull then click save.
+7. Add all the indexers in Jackett repeating steps 1-6.
+
+1. go to settings -> Download Clients, click add -> qbittorrent.
+2. fill in the client properties,, placing the host `ip address`, `port`, `username`  and `password`/
+3. click test if successful then click save.
+4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads`
+5. click save
+
+#### Testing Radarr
+Your finished just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in ineractive search as some files are huge( might have different different languages, uncompressed etc..)
+![Screenshot from 2024-06-02 17-19-14](https://github.com/geovanigaldemsugar/streaming/assets/67174852/71848e11-3d96-458b-b28d-f1d4f6c58c54)
+
+#### Jellyfin
+Jellyfin create a nice platform for us to watch movies,tv shows and anime. across multiply devices with it being avaible on web andriod and ios.
+1. go to `<host_computer_ipaddress>:8096`
+2. complete the wizard, adding your libaries, `/data/tv` and `/data/movies`
+
+
+#### Testing Jellyfin
+Your finished click on a show and start watching!
+
+![Screenshot from 2024-06-02 17-29-55](https://github.com/geovanigaldemsugar/streaming/assets/67174852/501a4b75-bb59-44a7-997a-284867818bc3)
+
+
+> [!WARNING]
+> A Fast and ample Storage Device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
 
 
 
