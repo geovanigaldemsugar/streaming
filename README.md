@@ -179,6 +179,7 @@ go to `<host_computer_ipaddress>:7878`
 
 #### Testing Radarr
 Your finished just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in ineractive search as some files are huge( might have different different languages, uncompressed etc..)
+
 ![Screenshot from 2024-06-02 17-19-14](https://github.com/geovanigaldemsugar/streaming/assets/67174852/71848e11-3d96-458b-b28d-f1d4f6c58c54)
 
 #### Jellyfin
