@@ -2,7 +2,7 @@
 Create your own media/streaming service at home using Sandarr, Radarr, Qbittorrent and Jellyfin. 
 
 ## Recommended
-1. Decent Computer/Server (personally running on a old dell i3 2nd genn with 4gb Ram)
+1. Decent Computer/Server (personally running on a old dell i3 2nd gen with 4gb Ram)
 2. 1TB SSD or Fast HDD
 
 ## Quickstart
