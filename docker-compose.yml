@@ -7,9 +7,9 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /home/geo/Desktop/sonarr/config:/config
-      - /home/geo/Desktop/sonarr/tv:/tv #optional
-      - /home/geo/Desktop/sonarr/qbittorrent/downloads:/downloads #optional
+      - /home/geo/streaming/sonarr/config:/config
+      - /home/geo/streaming/tv:/tv 
+      - /home/geo/streaming/qbittorrent/downloads:/downloads 
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -22,9 +22,9 @@ services:
       - TZ=Etc/UTC
 
     volumes:
-      - /home/geo/Desktop/sonarr/radarr/data:/config
-      - /home/geo/Desktop/sonarr/movies:/movies #optional
-      - /home/geo/Desktop/sonarr/qbittorrent/downloads:/downloads #optional
+      - /home/geo/streaming/radarr/data:/config
+      - /home/geo/streaming/movies:/movies 
+      - /home/geo/streaming/qbittorrent/downloads:/downloads 
 
     ports:
       - 7878:7878
@@ -36,11 +36,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - AUTO_UPDATE=true #optional
+      - AUTO_UPDATE=true
       - RUN_OPTS= #optional
     volumes:
-      - /home/geo/Desktop/sonarr/jackett/data:/config
-      - /home/geo/Desktop/sonarr/qbittorrent/downloads:/downloads
+      - /home/geo/streaming/jackett/data:/config
+      - /home/geo/streaming/qbittorrent/downloads:/downloads
     ports:
       - 9117:9117
     restart: unless-stopped
@@ -54,8 +54,8 @@ services:
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
     volumes:
-      - /home/geo/Desktop/sonarr/qbittorrent/appdata:/config
-      - /home/geo/Desktop/sonarr/qbittorrent/downloads:/downloads
+      - /home/geo/streaming/qbittorrent/appdata:/config
+      - /home/geo/streaming/qbittorrent/downloads:/downloads
     ports:
       - 8080:8080
       - 6881:6881
@@ -68,14 +68,14 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
+      - JELLYFIN_PublishedServerUrl=192.168.0.5 
     volumes:
-      - /home/geo/Desktop/sonarr/jellyfin/library:/config
-      - /home/geo/Desktop/sonarr/tv:/data/tvshows
-      - /home/geo/Desktop/sonarr/movies:/data/movies
+      - /home/geo/streaming/jellyfin/library:/config
+      - /home/geo/streaming/tv:/data/tvshows
+      - /home/geo/streaming/movies:/data/movies
     ports:
       - 8096:8096
-      - 8920:8920 #optional
-      - 7359:7359/udp #optional
-      - 1900:1900/udp #optional
+      - 8920:8920
+      - 7359:7359/udp
+      - 1900:1900/udp 
     restart: unless-stopped
