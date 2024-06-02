@@ -194,7 +194,7 @@ Your finished click on a show and start watching!
 
 
 > [!WARNING]
-> A Fast and Ample Storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
+> A Fast and Ample storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
 
 
 
