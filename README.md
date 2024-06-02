@@ -132,7 +132,7 @@ go to jacket at  `<host_computer_ipaddress>:9117`
 3. Adding as many indexes as you can make sure there either tv, movies, and anime indexes. some indexes are private (invite only) but some are semi private which means you can sign up to use them. Try to add some semi-privates one too.
 
 #### qbittorent
-qbittorrent will be our download client to download videos using the torrent links
+qbittorrent will be our download client to download videos using the torrent links.
 
 go to `<host_computer_ipaddress>:8080` 
 1. login using the login details you saved earlier
