@@ -108,7 +108,7 @@ services:
 ```
 #### Starting the Applications
 Run in the same directoy as the docker compose file - `docker compose up`. docker will now download the images and run them.
-Qbittorrent will give us a temporary login details just copy and save them real quick.
+Qbittorrent will give us a temporary login details, just copy and save them real quick.
 ```sh
 qbittorrent  | The WebUI administrator username is: admin
 qbittorrent  | The WebUI administrator password was not set. A temporary password is provided for this session: UKH7QLHF8
