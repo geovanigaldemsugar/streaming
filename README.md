@@ -10,7 +10,7 @@ Create your own media/streaming service at home using Sandarr, Radarr, Qbittorre
 You need to have an idea where you want your media server/streaming to run. you can run it on your personal computer (which i don't recommended unless you have a extra HDD attached). Currently i use my PC, with a seperate drive with ubuntu server installed. You don't have to install a serperate os or anything as the applications themselves are dockerized for us. So that means you can also run them on windows(not that they don't have a windows versions though), running these applications with docker make setup much easier and less risky in case you break something (configs etc...).  
 
 #### Docker 
-Installing [Docker Engine](https://docs.docker.com/engine/install/) is a must. Docker allows us to run bare bone VMs that containerizes an application on our system, docker just works everywhere which is its usefull.
+Installing [Docker Engine](https://docs.docker.com/engine/install/) is a must. Docker allows us to run bare bone VMs that containerizes an application on our system, docker just works everywhere which is why it's usefull.
 
 #### Docker-Compose file
 Create a directory/folder where will create our [docker-compose](https://docs.docker.com/compose/) file.
