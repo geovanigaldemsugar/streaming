@@ -112,13 +112,15 @@ qbittorrent  | The WebUI administrator username is: admin
 qbittorrent  | The WebUI administrator password was not set. A temporary password is provided for this session: UKH7QLHF8
 ```
 
-#### where are the Applications ? 
+### where are the Applications ? 
 The respective web gui's are hosted
-1. Jackett - `<host_compter_ipaddress>:9117`
-2. Qbittorrent - `<host_compter_ipaddress>:8080`
-3. Sonarr - `<host_compter_ipaddress>:8989`
-4. Radarr -  `<host_compter_ipaddress>:7878`
-5. Jellyfin - `<host_compter_ipaddress>:8096`
+1. Jackett - `<host_computer_ipaddress>:9117`
+2. Qbittorrent - `<host_computer_ipaddress>:8080`
+3. Sonarr - `<host_computer_ipaddress>:8989`
+4. Radarr -  `<host_computer_ipaddress>:7878`
+5. Jellyfin - `<host_computer_ipaddress>:8096`
+
+###
 
 
 
