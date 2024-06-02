@@ -120,7 +120,24 @@ The respective web gui's are hosted
 4. Radarr -  `<host_computer_ipaddress>:7878`
 5. Jellyfin - `<host_computer_ipaddress>:8096`
 
-###
+### Setup
+#### Jackett
+Sonarr, Radarr use indexers (oraganized and searchable databases of torrent links) to find appropiate torrent files for tv shows and movies. So will need to sort that out hence ***Jackett***. Jackett is api that sits between the indexers and Sonarr & Radarr making it easy to manage, add or remove indexers private or semi private or public.
+
+go to jacket at  `<host_computer_ipaddress>:9117`
+1. Copy the api key at the top right and save it for later
+2. Click add indexes
+3. Adding as many indexes as you can make sure there either tv, movies, and anime indexes. some indexes are private (invite only) but some are semi private which means you can sign up to use them. Try to add some semi-privates one too.
+
+#### qbittorent
+qbittorrent will be our download client to download videos using the torrent links
+
+go to `<host_computer_ipaddress>:8080` 
+1. login using the login details you saved earlier
+2. click settings, then webui, change you password and username, optionally you can disable auth for local addresses
+
+####Sonarr
+
 
 
 
