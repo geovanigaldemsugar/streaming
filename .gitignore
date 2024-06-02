@@ -1,0 +1,9 @@
+config/
+jacket/
+jackett/
+jellyfin/
+movies/
+qbittorrent/
+radarr/
+sabnzbd/
+tv/
