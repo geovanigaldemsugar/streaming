@@ -127,22 +127,22 @@ The respective web gui's are hosted
 Sonarr, Radarr use indexers (oraganized and searchable databases of torrent links) to find appropiate torrent files for tv shows and movies. So will need to sort that out hence ***Jackett***. Jackett is api that sits between the indexers and Sonarr & Radarr making it easy to manage, add or remove indexers whether private or semi private or public.
 
 go to jacket at  `<host_computer_ipaddress>:9117`
-1. Copy the api key at the top right and save it for later
-2. Click add indexes
+1. Copy the api key at the top right and save it for later.
+2. Click add indexes.
 3. Adding as many indexes as you can make sure there either tv, movies, and anime indexes. some indexes are private (invite only) but some are semi private which means you can sign up to use them. Try to add some semi-privates one too.
 
 #### qbittorent
 qbittorrent will be our download client to download videos using the torrent links.
 
 go to `<host_computer_ipaddress>:8080` 
-1. login using the login details you saved earlier
-2. click settinggs ->  webui, change you password and username, optionally you can disable auth for local addresses
+1. login using the login details you saved earlier.
+2. click settinggs ->  webui, change you password and username, optionally you can disable auth for local addresses.
 
 #### Sonarr
 Sonarr monitors and download our tv shows for us, using indexes and download client.
 
 go to `<host_computer_ipaddress>:8989`
-1. add your login details
+1. add your login details.
 2. go to settings -> media management, click add root folder, scroll down until you see `/tv/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/tv` to give acess to all. modify the permisson however you want.
 3. go to settings -> Indexers, click add, under torrents click `Torznab`.
 4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
@@ -164,7 +164,7 @@ Your finished just search for a show `Symbionic Titan` to add and test it out. i
 Sonarr monitors and download our movie shows for us, using indexes and download client.
 
 go to `<host_computer_ipaddress>:7878`
-1. add your login details
+1. add your login details.
 2. go to settings -> media management, click add root folder, scroll down until you see `/movies/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/movies` to give acess to all. modify the permisson however you want.
 3. go to settings -> Indexers, click add, under torrents click `Torznab`.
 4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
@@ -179,14 +179,15 @@ go to `<host_computer_ipaddress>:7878`
 5. click save
 
 #### Testing Radarr
-Your finished just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in ineractive search as some files are huge( might have different different languages, uncompressed etc..)
+Your finished just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in ineractive search as some files are huge( might have different different languages, uncompressed etc..).
 
 ![Screenshot from 2024-06-02 17-19-14](https://github.com/geovanigaldemsugar/streaming/assets/67174852/71848e11-3d96-458b-b28d-f1d4f6c58c54)
 
 #### Jellyfin
 Jellyfin create a nice platform for us to watch movies,tv shows and anime. across multiply devices with it being avaible on web andriod and ios.
-1. go to `<host_computer_ipaddress>:8096`
-2. complete the wizard, adding your libaries, `/data/tv` and `/data/movies`
+go to `<host_computer_ipaddress>:8096`
+
+1. complete the wizard, adding your libaries, `/data/tv` and `/data/movies`.
 
 
 #### Testing Jellyfin
@@ -196,7 +197,7 @@ Your finished click on a show and start watching!
 
 
 > [!WARNING]
-> A Fast and Ample storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
+> A Fast and Ample storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck.
 
 
 
