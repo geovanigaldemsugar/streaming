@@ -1,5 +1,5 @@
 # Streaming 📺
-#### Create your own media/streaming service at home using Sandarr, Radarr, Qbittorrent and Jellyfin. 
+Create your own media/streaming service at home using Sandarr, Radarr, Qbittorrent and Jellyfin. 
 
 ## Recommended
 1. Decent Computer/Server (personally running on a old dell i3 2nd genn with 4gb Ram)
@@ -194,7 +194,7 @@ Your finished click on a show and start watching!
 
 
 > [!WARNING]
-> A Fast and ample Storage Device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
+> A Fast and Ample Storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck
 
 
 
