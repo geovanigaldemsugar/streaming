@@ -124,7 +124,7 @@ The respective web gui's are hosted
 
 ### Setup
 #### Jackett
-Sonarr, Radarr use indexers (oraganized and searchable databases of torrent links) to find appropiate torrent files for tv shows and movies. So will need to sort that out hence ***Jackett***. Jackett is api that sits between the indexers and Sonarr & Radarr making it easy to manage, add or remove indexers wither private or semi private or public.
+Sonarr, Radarr use indexers (oraganized and searchable databases of torrent links) to find appropiate torrent files for tv shows and movies. So will need to sort that out hence ***Jackett***. Jackett is api that sits between the indexers and Sonarr & Radarr making it easy to manage, add or remove indexers whether private or semi private or public.
 
 go to jacket at  `<host_computer_ipaddress>:9117`
 1. Copy the api key at the top right and save it for later
