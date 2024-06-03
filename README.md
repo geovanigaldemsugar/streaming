@@ -146,36 +146,36 @@ go to `<host_computer_ipaddress>:8989`
 2. go to settings -> media management, click add root folder, scroll down until you see `/tv/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/tv` to give acess to all. modify the permisson however you want.
 3. go to settings -> Indexers, click add, under torrents click `Torznab`.
 4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
-5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket api key you saved earlier. click on category to refresh then click TV and or/ select the specifc catergories you want.
+5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket api key you saved earlier. click on category to refresh, then click TV and or select the specifc catergories you want.
 6. click test if successfull then click save.
 7. Add all the indexers from Jackett, repeating steps 1-6.
 
 1. go to settings -> Download Clients, click add -> qbittorrent.
 2. fill in the client properties,, placing the host `ip address`, `port`, `username`  and `password`/
 3. click test if successful then click save.
-4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads`
+4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address `<host_computer_ipaddress>`, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads/`
 5. click save
 
 #### Testing Sonarr
-Your finished just search for a show `Symbionic Titan` to add and test it out. it takes time for the shows to be downloaded.
+Your finished just search for a show eg. `Symbionic Titan` to add and test it out. it takes time for the shows to be downloaded.
 ![Screenshot from 2024-06-02 17-12-52](https://github.com/geovanigaldemsugar/streaming/assets/67174852/64257fac-01b3-42ee-b6ee-9c1b1c257210)
 
 #### Radarr
-Sonarr monitors and download our movie shows for us, using indexes and download client.
+Rodarr monitors and download our movies for us, using indexes and download client.
 
 go to `<host_computer_ipaddress>:7878`
 1. add your login details.
 2. go to settings -> media management, click add root folder, scroll down until you see `/movies/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/movies` to give acess to all. modify the permisson however you want.
 3. go to settings -> Indexers, click add, under torrents click `Torznab`.
 4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
-5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket api key you saved earlier. click on category to refresh then click TV and or/ select the specifc catergories you want.
+5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket api key you saved earlier. click on category to refresh, then click TV and or select the specifc catergories you want.
 6. click test if successfull then click save.
 7. Add all the indexers from Jackett, repeating steps 1-6.
 
 1. go to settings -> Download Clients, click add -> qbittorrent.
 2. fill in the client properties,, placing the host `ip address`, `port`, `username`  and `password`/
 3. click test if successful then click save.
-4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads`
+4. since were in docker we need a remote mapping, at the bottom in Download Clients add a remote mapping, for the `host` it is the qbittorrent host ip address `<host_computer_ipaddress>`, `remote path` is the path on your computer to the download client folder `/your/path/streaming/qbittorrent/downloads` and lastly the local path is the path in the sonarr docker thats mapp to it which is `/downloads/`
 5. click save
 
 #### Testing Radarr
