@@ -191,7 +191,7 @@ go to `<host_computer_ipaddress>:8096`
 
 
 #### Testing Jellyfin
-Your finished click on a show and start watching!
+Your finished, click on a show and start watching!
 
 ![Screenshot from 2024-06-02 17-29-55](https://github.com/geovanigaldemsugar/streaming/assets/67174852/501a4b75-bb59-44a7-997a-284867818bc3)
 
