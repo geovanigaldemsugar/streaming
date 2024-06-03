@@ -157,7 +157,7 @@ go to `<host_computer_ipaddress>:8989`
 5. click save
 
 #### Testing Sonarr
-Your finished just search for a show eg. `Symbionic Titan` to add and test it out. it takes time for the shows to be downloaded.
+Your finished, just search for a show  `Symbionic Titan` to add and test it out. it takes time for the shows to be downloaded.
 ![Screenshot from 2024-06-02 17-12-52](https://github.com/geovanigaldemsugar/streaming/assets/67174852/64257fac-01b3-42ee-b6ee-9c1b1c257210)
 
 #### Radarr
@@ -179,12 +179,12 @@ go to `<host_computer_ipaddress>:7878`
 5. click save
 
 #### Testing Radarr
-Your finished just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in interactive search as some files are huge ( might contian different languages, uncompressed etc..).
+Your finished, just search for a movie `The Dark Knight` to add and test it out. Sometimes it nessesary for you pick the torrent yourself in interactive search as some files are huge ( might contain different languages, uncompressed etc..).
 
 ![Screenshot from 2024-06-02 17-19-14](https://github.com/geovanigaldemsugar/streaming/assets/67174852/71848e11-3d96-458b-b28d-f1d4f6c58c54)
 
 #### Jellyfin
-Jellyfin create a nice platform for us to watch movies,tv shows and anime. across multiply devices with it being avaible on web andriod and ios.
+Jellyfin create a nice platform for us to watch movies, tv shows and anime. Across multiple devices with it being available on web andriod and ios.
 go to `<host_computer_ipaddress>:8096`
 
 1. complete the wizard, adding your libaries, `/data/tv` and `/data/movies`.
@@ -197,7 +197,7 @@ Your finished click on a show and start watching!
 
 
 > [!WARNING]
-> A Fast and Ample storage device is nessarcessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a HUGE bottleneck.
+> A Fast and Ample storage device is necessary, i've had problems with Jellyfin stuttering, which is due to my slow HDD being a huge bottleneck.
 
 
 
