@@ -18,7 +18,7 @@ Create a directory/folder where will create our [docker-compose](https://docs.do
 - ubuntu: `mkdir streaming`
 - windows: `dir streaming`
 
-create a file called docker-compose.yml, in the docker-compose file couple a things to note,
+Create a file called docker-compose.yml, in the docker-compose file couple a things to note,
 1. The shared volume for `/your/path/streaming/qbittorrent`  across the sonarr, raddarr, and qbittorrent must be the same path.
 2. The shared volume `/your/path/streaming/tv` - Sonarr and `/your/path/streaming/movies` - Radarr must be the same path as you sepcified for jellyfin.
 
