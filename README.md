@@ -165,7 +165,7 @@ Rodarr monitors and download our movies for us, using indexes and download clien
 
 go to `<host_computer_ipaddress>:7878`
 1. add your login details.
-2. go to settings -> media management, click add root folder, scroll down until you see `/movies/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` its an permission issue then run  `sudo chmod -R 777 /your/path/streaming/movies` to give acess to all. modify the permisson however you want.
+2. go to settings -> media management, click add root folder, scroll down until you see `/movies/`  then save. root folder is where sonarr will import and manage downloaded shows. if you gett an error `Folder is not writable by user abc` it's an permission issue then run  `sudo chmod -R 777 /your/path/streaming/movies` to give acess to all. modify the permisson however you want.
 3. go to settings -> Indexers, click add, under torrents click `Torznab`.
 4. go back to Jackett, click copy Torznab feed of the indexer you wish to add.
 5. go back to Sonarr, fill in the indexers properties, you can use the same name as the indexer, in `url field` paste the `Torznab Feed` , and in the api key use the jacket api key you saved earlier. click on category to refresh, then click TV and or select the specifc catergories you want.
